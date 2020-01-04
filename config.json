@@ -1,5 +1,6 @@
 {
-  "botToken": "",
+  "botToken": "DISCORD_BOT_API_TOKEN",
   "cmdPrefix": "!pb ",
-  "defaultActivity": "Keeping watch..."
+  "defaultActivity": "Try '!pb cleverbot help'",
+  "cleverbotToken": "CLEVERBOT_API_TOKEN"
 }

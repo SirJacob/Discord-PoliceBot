@@ -1,13 +1,14 @@
 {
-  "name": "discord-policebot",
-  "version": "0.0.5",
+  "name": "discord-cleverbot",
+  "version": "v0.0.1-pb0.0.5",
+  "description": "",
+  "main": "PoliceBot.js",
+  "keywords": [],
+  "author": "Sir Jacob",
   "dependencies": {
     "discord.js": "^11.5.1",
     "npm": "^6.13.4",
-    "callsites": "latest"
-  },
-  "devDependencies": {
-    "mongodb": "^3.4.1",
+    "callsites": "latest",
     "request": "^2.88.0"
   }
 }

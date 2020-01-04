@@ -86,11 +86,7 @@ Client.on("messageDelete", async message => {
 Client.on("message", async message => {
     if (!botReady) return;
     if (isBadMessage(message)) return;
-    if (message.system) {
-        onSystemMessage(message);
-    } else if (message.author.bot) {
-        onBotMessage(message);
-    } else if (message.content.startsWith(Config.cmdPrefix)) {
+    if (message.content.startsWith(Config.cmdPrefix)) {
         await cmdController(message);
         //Keep the CMDs out of chat
         message.delete();
@@ -101,13 +97,6 @@ Client.on("message", async message => {
 
 function isBadMessage(message) {
     return message.guild === null || !message.guild.available || message.author.id === Client.user.id;
-}
-
-function onBotMessage(message) {
-}
-
-
-function onSystemMessage(message) {
 }
 
 let runnable = {};

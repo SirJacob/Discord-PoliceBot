@@ -8,7 +8,6 @@ let cleverbotState; // a.k.a cs
 
 module.exports.initialize = function () {
     pb.events.on("message", async message => {
-        if (message.author === pb.Client.user) return;
         if (channel !== message.channel) return;
         askCleverbot(message);
     });
@@ -37,6 +36,15 @@ module.exports.cleverbot = function (message, args) {
         cleverbotState = args[1];
     } else if (cmd === "new" && args.length === 1) {
         cleverbotState = undefined;
+    } else if (cmd === "help" && args.length === 1) {
+        h.sendMessage(message.author, message.author, `Cleverbot Commands:
+${Config.cmdPrefix}cleverbot start -> Start talking to Cleverbot in this channel.
+${Config.cmdPrefix}cleverbot stop -> Stop talking to Cleverbot in this channel.
+${Config.cmdPrefix}cleverbot new -> Start a new conversation with Cleverbot.
+${Config.cmdPrefix}cleverbot getcs -> Get Cleverbot's state. This can be used to go back to a previous conversation.
+${Config.cmdPrefix}cleverbot state "CLEVERBOT_STATE_HERE" -> Supply a Cleverbot state and return to a previous conversation.
+
+Note: Right now, Cleverbot can only talk in one channel at a time.`);
     }
 };
 
