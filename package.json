@@ -1,7 +1,7 @@
 {
-  "name": "discord-cleverbot",
-  "version": "v0.0.1-pb0.0.5",
-  "description": "",
+  "name": "@sirjacob/discord-cleverbot",
+  "version": "0.0.2-pb0.0.7",
+  "description": "A Discord bot that allows you to talk to Cleverbot!",
   "main": "PoliceBot.js",
   "keywords": [],
   "author": "Sir Jacob",
@@ -10,5 +10,17 @@
     "npm": "^6.13.4",
     "callsites": "latest",
     "request": "^2.88.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirJacob/Discord-PoliceBot.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/SirJacob/Discord-PoliceBot/issues"
+  },
+  "homepage": "https://github.com/SirJacob/Discord-PoliceBot/tree/cleverbot#readme"
 }
